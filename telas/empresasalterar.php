@@ -26,7 +26,7 @@ $sair=$_REQUEST['sair']+1;
 $entrada=$_REQUEST['sair'];
 
 # iniciando a emissão das TAGs que vão montar uma página HTML que vai 'retornar' ao servidor de página.
-iniciapagina("empresas","aterar","Alterar");
+iniciapagina("empresas",TRUE,"aterar","Alterar");
 switch (TRUE)
 {
   case ( $bloco==1 ):

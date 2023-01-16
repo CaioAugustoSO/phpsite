@@ -20,7 +20,7 @@ function conectamariadb($servidor,$usuario,$senha,$base)
   # Estabelecendo a conexão com BD
   $link=mysqli_connect($servidor,$usuario,$senha,$base); # esta função retorna o número de conexão.
 }
-function iniciapagina($tabela,$titulo,$acao)
+function iniciapagina($tabela,$fundo,$titulo,$acao)
 { # Recebe....> $tabela - Nome da Tabela com dados gerenciados pelo PA que aciona a função.
   #             $titulo - Título da página que será exibida na TAG <title>...</titlte>
   # Descrição.> Emite as TAGs iniciais de uma página HTML com os valores recebidos na 'chamada' da função.
@@ -28,9 +28,9 @@ function iniciapagina($tabela,$titulo,$acao)
   printf("<html>\n");
   printf(" <head>\n");
   printf("  <title>$titulo</title>\n");
-  printf("<link rel='stylesheet' type='/text/css' href='./$tabela.css'>\n");
+  printf("<link rel='stylesheet' type='text/css' href='./$tabela.css'>\n");
   printf(" </head>\n");
-  printf(" <body>\n");
+  printf($fundo ? " <body class='$acao'>\n" : " <body>\n");
   global $bloco;
   $corpodapagina=( $acao!="Listar" or $bloco<3 ) ? "<body class='$acao'>" : "<body class='Imprimir'>" ;
   printf(" $corpodapagina\n");
@@ -43,7 +43,7 @@ function iniciapagina($tabela,$titulo,$acao)
     printf("     <bold>Empresas</bold>:\n");
     printf("     <button class='ins' type='submit' formaction='./".$tabela."incluir.php'  >Incluir</button>\n"); # <icom>&#x1f7a5;</icom>
     printf("     <button class='alt' type='submit' formaction='./".$tabela."alterar.php'  >Alterar</button>\n"); # <icom>&#x1f589;</icom>
-    printf("     <button class='del' type='submit' formaction='./".$tabela."excluir.php'  >Excluir</button>\n"); # <icom>&#x1f7ac;</icom>
+    printf("     <button class='exc' type='submit' formaction='./".$tabela."excluir.php'  >Excluir</button>\n"); # <icom>&#x1f7ac;</icom>
     printf("     <button class='con' type='submit' formaction='./".$tabela."consultar.php'>Consultar</button>\n"); # <icom>&#x1f50d;&#xfe0e;</icom>
     printf("     <button class='lst' type='submit' formaction='./".$tabela."listar.php'   >Listar</button>\n"); # <icom>&#x1f5a8;</icom>
     printf("     <button class='nav' type='button' onclick='history.go(-$sair)'>Sair</button>\n"); # <icom>&#x2348;</icom>

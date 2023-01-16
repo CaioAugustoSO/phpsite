@@ -14,6 +14,7 @@ function picklist($acao)
   # Globalizando a variável usada para guardar o número da conexão
   global $link;
   global $sair;
+  global $entrada;
   $txtacao=( $acao=='C' ) ? "Consultar" : ( ( $acao=='E' ) ? "Excluir" : "Alterar" ) ;
   # Operador ternário para decidir qual programa será 'chamado' recursivamente
   $prg=( $acao=='C' ) ? "empresasconsultar.php" : ( ( $acao=='E' ) ? "empresasexcluir.php" : "empresasalterar.php" ) ;
@@ -43,6 +44,8 @@ function picklist($acao)
   # A TAG <button> permite que um form tenha mais de um botão 'submit' recebendo valores diferentes na mesma posição do vetor que lê a STD.
   printf("<button class='button' type='reset'  name='btreset' >Limpar escolha</button>");
   printf("<button class='button' type='submit' name='btenvio' value='2'>$txtacao</button>");
+  printf("<button class='nav' type='button' onclick='history.go(-$entrada)'>Entrada</button>\n");
+
   printf("</form>\n");
 }
 function veregistro($idempresa)

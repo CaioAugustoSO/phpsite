@@ -13,6 +13,7 @@ require("../fncs/catalogo.php");
 require("./empresasfuncoes.php");
 $bloco= ( ISSET($_REQUEST['bloco']) ) ? $_REQUEST['bloco'] : 1 ;
 $sair=$_REQUEST['sair']+1;
+
 $entrada=$_REQUEST['sair'];
 
 # Estabelecendo a conexão do PA com a Base de Dados
@@ -20,7 +21,7 @@ $entrada=$_REQUEST['sair'];
 # Um Guia (resumo) de comandos SQL está disponível em:
 # https://www.fatecourinhos.edu.br/disciplinas/ilp540/exercprojs/projeto2-php/exfnts/2022.2-Guia(curto)SQL.sql
 # iniciando as tags da página
-iniciapagina("empresas","Excluir","Excluir");
+iniciapagina("empresas",TRUE,"Excluir","Excluir");
 switch (TRUE)
 {
   case ( $bloco==1 ):

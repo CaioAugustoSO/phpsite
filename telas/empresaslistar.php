@@ -20,9 +20,10 @@ $bloco= ( ISSET($_REQUEST['bloco']) ) ? $_REQUEST['bloco'] : 1 ;
 # A variável $sair é passada entre TODOS os forms para contabilizar os 'clicks' de avanço em uma
 # funcionalidade e serve montar o botão de volta para entrada e o botão de sair do sistema.
 $sair=$_REQUEST['sair']+1;
+
 $entrada=$_REQUEST['sair'];
 # $bloco for 3 e a ação for Listar a tela deve ser emitida em branco
-iniciapagina("empresas","empresaslistar","Listar");
+iniciapagina("empresas",TRUE,"empresaslistar","Listar");
 switch (TRUE)
 {
   case ( $bloco==1 ):

@@ -20,7 +20,7 @@ global $sair;
 global $menu;
 $sair=1; # Esta variável contabiliza a quantidade de cliques que se faz navegando pelo sistema.
 # printf("$sair<br>\n");
-iniciapagina("empresas","EMP-Abertura","Abertura");
+iniciapagina("empresas",TRUE,"EMP-Abertura","Abertura");
 printf("Este sistema faz o Gerenciamento de dados da Tabela Exemplo para Referência.<br>\n");
 printf("O menu apresentado acima apresenta as funcionalidades do sistema.<br><br>\n");
 printf("São apresentadas as funcionalidades:<br>\n");

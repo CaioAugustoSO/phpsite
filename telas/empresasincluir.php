@@ -16,10 +16,11 @@ require("./empresasfuncoes.php");
 # o comando IF anterior pode ser trocado por um operador ternário na forma:
 $bloco= ( ISSET($_REQUEST['bloco']) ) ? $_REQUEST['bloco'] : 1 ;
 $sair=$_REQUEST['sair']+1;
+
 $entrada=$_REQUEST['sair'];
 
 # iniciando as tags da página
-iniciapagina("empresas","Incluir","Incluir");
+iniciapagina("empresas",TRUE,"Incluir","Incluir");
 switch (TRUE)
 {
   case ($bloco==1):
@@ -65,6 +66,7 @@ switch (TRUE)
     printf("<tr><td></td><td><button onclick='history.go(-1)'>Voltar</button>
                              <button type='reset'>Limpar</button>
                              <button type='submit'>Incluir</button></td></tr>\n");
+                             
     printf("</table>\n");
     printf("</form>\n");
     break;
