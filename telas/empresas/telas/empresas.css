@@ -1,0 +1,29 @@
+.button {
+    font-size: 15px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border: none;
+    color: black;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 7px 0px 7px;
+    cursor: pointer;
+}
+
+.botao {
+    font-size: 30px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #FFFFFF;
+    border: none;
+    color: black;
+    padding: 0px 0px 0px 0px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px 0px 0px 0px;
+    cursor: pointer;
+}

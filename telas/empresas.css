@@ -1,0 +1,34 @@
+/* Seletores do sistema */
+acesso   { font-family: TAHOMA, Arial, sans-serif; font-size: 14px; }
+texto    { font-family: TAHOMA, Arial, sans-serif; font-size: 12px; }
+titulo   { font-family: TAHOMA, Arial, sans-serif; font-size: 16px; margin: 5px 0px 0px 5px;}
+red      { color:red; }
+bold     { font-weight: bold; }
+redbold  { color:red; font-weight:bold; }
+redbldund{ color:red; font-weight:bold; text-decoration:underline; }
+icog     { font-size:30px; }
+icom     { font-size:20px; }
+/* Faremos aqui uma alteração não recomendada pelos especialistas: Agruparamos os seletores por funcionalidade do sistema, */
+/* Isso facilitará a identificação de cotes segundo as funcionalidades Abertura+Menu, Incluir Consultar, Alterar, Excluir e Listar */
+body           { font-family: TAHOMA, Arial, sans-serif; }
+div            { top:0; left:0; width:100%; border:none; height:60px; }
+button         { background-color:transparent;
+                 font-family: TAHOMA, Arial, sans-serif; font-size:17px;
+                 color:black;
+                 text-align:center;
+                 border: none;
+                 padding:0px 10px 0px 10px;
+                 margin:0px 5px 0px 0px; /* margin:7px -3px -3px -3px; */
+                 width:85px; height:34px;
+                 cursor:pointer;
+                 border-radius: 10px 10px 0px 0px;
+                 text-decoration: none;
+                 display: inline-block;
+               }
+button.nav     { background-color:transparent;
+                 font-family: TAHOMA, Arial, sans-serif; font-size:12px;
+                 margin:0px 0px 0px 0px;
+                 width:120px; /* troquei este atributo width:85px; por width:25px;  -  depois simplesmente tirei o width:25px; */
+                 /* tirei o height:27px;  - prevalece o que está no button*/
+               }
+        
